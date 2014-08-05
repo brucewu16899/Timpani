@@ -1,0 +1,21 @@
+{
+    "name": "thyyppa/timpani",
+    "description": "Laravel 4.2 CMS",
+    "authors": [
+        {
+            "name": "Travis Hyyppä",
+            "email": "travishyyppa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "codeception/codeception": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Thyyppa\\Timpani": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
