@@ -1,0 +1,186 @@
+<?php
+
+/**
+ *
+ * @author Travis Hyyppa <travishyyppa@gmail.com>
+ *
+ */
+
+namespace Thyyppa\Timpani;
+
+use Thyyppa\Timpani\Render\Render;
+use Thyyppa\Timpani\Form\Form;
+
+use Route;
+use Redirect;
+
+class FacadeHandler
+{
+
+
+    /**
+     * Render instance
+     *
+     * @var  Render
+     */
+    protected $render;
+
+
+    /**
+     * Form instance
+     *
+     * @var  Form
+     */
+    protected $form;
+
+
+    /**
+     * Constructor
+     *
+     * @param  Render  $render  Inject Render
+     * @param  Form    $form    Inject Form
+     */
+    function __construct( Render $render, Form $form )
+    {
+
+        $this->render = $render;
+
+        $this->form = $form;
+
+    }
+
+
+
+    /**
+     * Render CMS content as text
+     *
+     * @param   string  $name  Field name
+     *
+     * @return  string         CMS content
+     */
+    public function render( $name )
+    {
+
+        return $this->render->byName( $name );
+
+    }
+
+
+
+    /**
+     * Generate edit form for field
+     *
+     * @param   string  $name        Field name
+     * @param   string  $label       Field label
+     * @param   string  $type        Input type
+     * @param   array   $attributes  HTML attributes
+     *
+     * @return  string               HTML
+     */
+    public function edit( $name, $label, $type = 'text', $attributes = [] )
+    {
+
+        return $this->form->edit( $name, $type, $attributes, $label );
+
+    }
+
+
+
+    /**
+     * Dynamic code editor for field
+     *
+     * @param   string  $name   Field name
+     * @param   string  $label  Field label
+     * @param   string  $mode   Ace Editor mode
+     * @param   string  $theme  Ace Editor theme
+     *
+     * @return  string          HTML
+     */
+    public function code( $name, $label, $mode = null, $theme = null )
+    {
+
+        return $this->form->code( $name, $label, $mode, $theme );
+
+    }
+
+
+
+    /**
+     * Submit button and close form
+     *
+     * @param   string  $text        Button text
+     * @param   array   $attributes  HTML Attributes
+     *
+     * @return  string               HTML
+     */
+    public function submit( $text = 'Submit', $attributes = [])
+    {
+
+        return $this->form->submit( $text, $attributes );
+
+    }
+
+
+
+    /**
+     * Form submit handler
+     *
+     * @return  Redirect  Redirect Back
+     */
+    public function post()
+    {
+
+        $this->form->post();
+
+        return Redirect::back();
+
+    }
+
+
+
+    /**
+     * Set form attributes
+     *
+     * @param   array   $attribtes  HTML attributes
+     *
+     * @return  array               Form attibutes
+     */
+    public function form_attributes( $attribtes )
+    {
+
+        return $this->form->setFormAttributes( $attribtes );
+
+    }
+
+
+
+    /**
+     * Generate stylesheet markup
+     *
+     * @return  string  HTML
+     */
+    public function stylesheets()
+    {
+
+        return $this->render->stylesheets();
+
+    }
+
+
+
+    /**
+     * Generate script markup
+     *
+     * @return  string  HTML
+     */
+    public function scripts()
+    {
+
+        return $this->render->scripts();
+
+    }
+
+
+}
+
+

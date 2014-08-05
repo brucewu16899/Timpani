@@ -8,6 +8,6 @@
         <target>docs/</target>
     </transformer>
     <files>
-        <directory>src</directory>
+        <directory>src/Thyyppa/Timpani</directory>
     </files>
 </phpdoc>
