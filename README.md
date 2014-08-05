@@ -1,7 +1,7 @@
 Timpani
 =======
 
-Laravel 4 Timpani Micro CMS
+Laravel 4 Micro CMS
 
 
 Installation
@@ -9,7 +9,7 @@ Installation
 
 Update your `composer.json` file to include:
 
-```
+```javascript
 "require": {
     "thyyppa\timpani": "~1.0"
 }
@@ -18,12 +18,14 @@ Update your `composer.json` file to include:
 
 or run
 
-` composer require "thyyppa/timpani:~1.0" `
-` composer update `
+```bash
+$ composer require "thyyppa/timpani:~1.0"
+$ composer update
+```
 
 After installation add the service provider to your `app/config/app.php` file:
 
-```
+```php
 'providers' => array(
 
     ...
@@ -36,7 +38,9 @@ After installation add the service provider to your `app/config/app.php` file:
 
 Then publish the assets with artisan:
 
-` php artisan asset:publish thyyppa/timpani `
+```bash
+$ php artisan asset:publish thyyppa/timpani
+```
 
 
 Useage
@@ -44,7 +48,7 @@ Useage
 
 In your layout files, add `Timpani::stylesheets()` and `Timpani::scripts()` to your `<head>` and at the bottom of the `<body>` tags:
 
-```
+```html+php
 <html>
     <head>
         ...
@@ -59,12 +63,12 @@ In your layout files, add `Timpani::stylesheets()` and `Timpani::scripts()` to y
 
 ```
 
-If you forget to add the `Timpani::scripts()` call, `Timpani::code(...)` will fall back to a `<textarea>` tag and will not use the Ace Editor.
+If you forget to add the `Timpani::scripts()` call, `Timpani::code(...)` will fall back to a `<textarea>` tag and will not use the [Ace Editor](http://ace.c9.io/).
 
 
 
 ### Todo
-    - Add migration information to readme
-    - Add Timpani::render() to readme
-    - Add form generation to readme
-    - Add config options to readme
+- Add migration information to readme
+- Add Timpani::render() to readme
+- Add form generation to readme
+- Add config options to readme
