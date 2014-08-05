@@ -1,7 +1,7 @@
 <?php
 
 
-Route::post( '/timpani', [
+Route::post( Config::get('timpani::routes.post'), [
     'as' => 'timpani',
     'uses' => function(){
         return Timpani::post();
