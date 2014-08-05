@@ -31,14 +31,6 @@ class FacadeHandler
 
         $this->form = $form;
 
-
-        Route::get('/blar', function(){
-
-            return 'Arrrg';
-
-        });
-
-
     }
 
 
