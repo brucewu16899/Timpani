@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * Timpani Service Provider
  * @author Travis Hyyppä <travishyyppa@gmail.com>
  *
  */
@@ -15,6 +15,9 @@ use Config;
 use Route;
 
 
+/**
+ * Timpani Service Provider
+ */
 class TimpaniServiceProvider extends ServiceProvider
 {
 

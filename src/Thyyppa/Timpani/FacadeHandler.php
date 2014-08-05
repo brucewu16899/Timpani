@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * Facade Handler
  * @author Travis Hyyppa <travishyyppa@gmail.com>
  *
  */
@@ -14,6 +14,10 @@ use Thyyppa\Timpani\Form\Form;
 use Route;
 use Redirect;
 
+
+/**
+ * Maps facade methods to underlying classes - look here for all available methods
+ */
 class FacadeHandler
 {
 

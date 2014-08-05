@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * Form Handler
  * @author Travis Hyyppa <travishyyppa@gmail.com>
  *
  */
@@ -16,6 +16,10 @@ use Session;
 use Lang;
 use Config;
 
+
+/**
+ * Handles form generation and processing
+ */
 class Form
 {
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * HTML Renderer
  * @author Travis Hyyppa <travishyyppa@gmail.com>
  *
  */
@@ -12,6 +12,10 @@ use Thyyppa\Timpani\Repository\ContentRepository;
 
 use View;
 
+
+/**
+ * Renders HTML content
+ */
 class Render
 {
 

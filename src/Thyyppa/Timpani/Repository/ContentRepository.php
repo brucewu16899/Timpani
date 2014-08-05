@@ -1,7 +1,7 @@
 <?php
 
 /**
- *
+ * Content Repository
  * @author Travis Hyyppa <travishyyppa@gmail.com>
  *
  */
@@ -11,6 +11,9 @@ namespace Thyyppa\Timpani\Repository;
 use Auth;
 
 
+/**
+ * Repository for CMS Content Model
+ */
 class ContentRepository
 {
 
