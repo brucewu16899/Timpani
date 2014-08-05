@@ -17,12 +17,28 @@ use Redirect;
 class FacadeHandler
 {
 
+
+    /**
+     * Render instance
+     *
+     * @var  Render
+     */
     protected $render;
 
+
+    /**
+     * Form instance
+     *
+     * @var  Form
+     */
     protected $form;
+
 
     /**
      * Constructor
+     *
+     * @param  Render  $render  Inject Render
+     * @param  Form    $form    Inject Form
      */
     function __construct( Render $render, Form $form )
     {
@@ -35,6 +51,13 @@ class FacadeHandler
 
 
 
+    /**
+     * Render CMS content as text
+     *
+     * @param   string  $name  Field name
+     *
+     * @return  string         CMS content
+     */
     public function render( $name )
     {
 
@@ -44,6 +67,16 @@ class FacadeHandler
 
 
 
+    /**
+     * Generate edit form for field
+     *
+     * @param   string  $name        Field name
+     * @param   string  $label       Field label
+     * @param   string  $type        Input type
+     * @param   array   $attributes  HTML attributes
+     *
+     * @return  string               HTML
+     */
     public function edit( $name, $label, $type = 'text', $attributes = [] )
     {
 
@@ -53,6 +86,16 @@ class FacadeHandler
 
 
 
+    /**
+     * Dynamic code editor for field
+     *
+     * @param   string  $name   Field name
+     * @param   string  $label  Field label
+     * @param   string  $mode   Ace Editor mode
+     * @param   string  $theme  Ace Editor theme
+     *
+     * @return  string          HTML
+     */
     public function code( $name, $label, $mode = null, $theme = null )
     {
 
@@ -62,6 +105,14 @@ class FacadeHandler
 
 
 
+    /**
+     * Submit button and close form
+     *
+     * @param   string  $text        Button text
+     * @param   array   $attributes  HTML Attributes
+     *
+     * @return  string               HTML
+     */
     public function submit( $text = 'Submit', $attributes = [])
     {
 
@@ -71,6 +122,11 @@ class FacadeHandler
 
 
 
+    /**
+     * Form submit handler
+     *
+     * @return  Redirect  Redirect Back
+     */
     public function post()
     {
 
@@ -82,6 +138,13 @@ class FacadeHandler
 
 
 
+    /**
+     * Set form attributes
+     *
+     * @param   array   $attribtes  HTML attributes
+     *
+     * @return  array               Form attibutes
+     */
     public function form_attributes( $attribtes )
     {
 
@@ -91,6 +154,11 @@ class FacadeHandler
 
 
 
+    /**
+     * Generate stylesheet markup
+     *
+     * @return  string  HTML
+     */
     public function stylesheets()
     {
 
@@ -100,6 +168,11 @@ class FacadeHandler
 
 
 
+    /**
+     * Generate script markup
+     *
+     * @return  string  HTML
+     */
     public function scripts()
     {
 
