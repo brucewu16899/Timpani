@@ -46,6 +46,11 @@ class TimpaniServiceProvider extends ServiceProvider
 
 
 
+    /**
+     * Boot ServiceProvider
+     *
+     * @return  void
+     */
 	public function boot()
 	{
 

@@ -15,11 +15,18 @@ use View;
 class Render
 {
 
+    /**
+     * ContentRepository instance
+     *
+     * @var  ContentRepository
+     */
     protected $content;
 
 
     /**
      * Constructor
+     *
+     * @param  ContentRepository  $content  Inject ContentRepository
      */
     function __construct( ContentRepository $content )
     {
@@ -30,6 +37,13 @@ class Render
 
 
 
+    /**
+     * Get field contents by name
+     *
+     * @param   string  $name  Field name
+     *
+     * @return  string         Field contents
+     */
     public function byName( $name )
     {
 
@@ -39,6 +53,11 @@ class Render
 
 
 
+    /**
+     * Render stylesheet markup
+     *
+     * @return  string  HTML
+     */
     public function stylesheets()
     {
 
@@ -48,6 +67,11 @@ class Render
 
 
 
+    /**
+     * Render script markup
+     *
+     * @return  string  HTML
+     */
     public function scripts()
     {
 

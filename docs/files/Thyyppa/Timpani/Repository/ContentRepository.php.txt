@@ -14,11 +14,19 @@ use Auth;
 class ContentRepository
 {
 
+    /**
+     * Content model instance
+     *
+     * @var  Content
+     */
     protected $model;
+
 
 
     /**
      * Constructor
+     *
+     * @param  Content  $model  Inject Content model
      */
     function __construct( Content $model )
     {
@@ -29,6 +37,13 @@ class ContentRepository
 
 
 
+    /**
+     * Get field content by name
+     *
+     * @param   string  $name  Field name
+     *
+     * @return  string         Field content
+     */
     public function getByName( $name )
     {
 
@@ -40,6 +55,13 @@ class ContentRepository
 
 
 
+    /**
+     * Insert fields into database
+     *
+     * @param   array   $values  Field data
+     *
+     * @return  bool             True on success
+     */
     public function insert( $values )
     {
 
@@ -55,6 +77,7 @@ class ContentRepository
         return $this->model->insert( $rows );
 
     }
+
 
 }
 

@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Facade;
 class Timpani extends Facade
 {
 
+    /**
+     * Return Facade accessor
+     *
+     * @return  string  Facade Accessor
+     */
     protected static function getFacadeAccessor()
     {
 
