@@ -1,4 +1,4 @@
-{{ HTML::script('/packages/thyyppa/timpani/ace-builds/src-noconflict/ace.js') }}
+{{ HTML::script('/packages/thyyppa/timpani/ace-builds/src-min/ace.js') }}
 
         <script>
             $(function(){
