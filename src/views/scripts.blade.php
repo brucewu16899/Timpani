@@ -5,8 +5,10 @@
 
                 $('div[data-timpani-editor]').each(function(){
 
+                    $(this).show();
+
                     var editor = ace.edit( this );
-                    var textarea = $( 'textarea[name="' + $(this).data('timpani-editor') + '"]' );
+                    var textarea = $( 'textarea[name="' + $(this).data('timpani-editor') + '"]' ).hide();
 
                     editor.getSession().setMode( "ace/mode/" + $(this).data('timpani-editor-mode') );
                     editor.setTheme( "ace/theme/" + $(this).data('timpani-editor-theme') );

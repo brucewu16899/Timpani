@@ -142,13 +142,13 @@ class Form
         $output .= $label ? $this->form->label( $name, $label ) : '';
 
         // Add the hidden text field
-        $output .= $this->form->textarea( $name, $value, [ 'style' => 'display:none;' ] );
+        $output .= $this->form->textarea( $name, $value, [ 'class' => Lang::get('timpani::html.default_class.form_control') ] );
 
         // Add the code editor container
         $output .= sprintf('<div data-timpani-editor="%s"
                                  data-timpani-editor-mode="%s"
                                  data-timpani-editor-theme="%s"
-                                 style="width:100%%;min-height:%s;">%s</div>',
+                                 style="width:100%%;min-height:%s;display:none;">%s</div>',
                                  $name, $mode, $theme, $height, $value);
 
 
