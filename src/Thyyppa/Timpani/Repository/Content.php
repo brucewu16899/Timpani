@@ -13,6 +13,11 @@ use Eloquent;
 class Content extends Eloquent
 {
 
+    /**
+     * Eloquent mass-assignable fields
+     *
+     * @var  array
+     */
     protected $fillable = [ 'title', 'content', 'user_id' ];
 
 }
