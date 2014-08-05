@@ -89,5 +89,23 @@ class FacadeHandler
     }
 
 
+
+    public function stylesheets()
+    {
+
+        return $this->render->stylesheets();
+
+    }
+
+
+
+    public function scripts()
+    {
+
+        return $this->render->scripts();
+
+    }
+
+
 }
 
