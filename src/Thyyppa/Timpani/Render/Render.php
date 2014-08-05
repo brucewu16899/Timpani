@@ -10,6 +10,8 @@ namespace Thyyppa\Timpani\Render;
 
 use Thyyppa\Timpani\Repository\ContentRepository;
 
+use View;
+
 class Render
 {
 
@@ -32,6 +34,24 @@ class Render
     {
 
         return $this->content->getByName( $name );
+
+    }
+
+
+
+    public function stylesheets()
+    {
+
+        return View::make('timpani::stylesheets');
+
+    }
+
+
+
+    public function scripts()
+    {
+
+        return View::make('timpani::scripts');
 
     }
 

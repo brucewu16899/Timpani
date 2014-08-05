@@ -47,7 +47,16 @@ class FacadeHandler
     public function edit( $name, $label, $type = 'text', $attributes = [] )
     {
 
-        return $this->form->form( $name, $type, $attributes, $label );
+        return $this->form->edit( $name, $type, $attributes, $label );
+
+    }
+
+
+
+    public function code( $name, $label, $mode = null, $theme = null )
+    {
+
+        return $this->form->code( $name, $label, $mode, $theme );
 
     }
 
