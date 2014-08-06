@@ -50,6 +50,8 @@ $ php artisan asset:publish thyyppa/timpani
 
 ### Migrate
 
+... coming soon
+
 
 ### Add scripts and stylesheets to layout
 
@@ -72,6 +74,8 @@ In your layout files, add `Timpani::stylesheets()` and `Timpani::scripts()` to y
 If you forget to add the `Timpani::scripts()` call, `Timpani::code(...)` will fall back to a `<textarea>` tag and will not use the [Ace Editor](http://ace.c9.io/).
 
 ### Config
+
+... coming soon
 
 Useage
 ======
