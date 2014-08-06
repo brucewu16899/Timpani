@@ -86,7 +86,7 @@ To display CMS content from the database use:
 
 ```php
 
-    {{ Timpani::render('name_of_asset') }}
+{{ Timpani::render('name_of_asset') }}
 
 ```
 
@@ -96,7 +96,7 @@ For a general text input:
 
 ```php
 
-    {{ Timpani::edit('name_of_asset', 'label', 'text', [ 'html' => 'attributes' ]) }}
+{{ Timpani::edit('name_of_asset', 'label', 'text', [ 'html' => 'attributes' ]) }}
 
 ```
 
@@ -104,7 +104,7 @@ For a textarea input:
 
 ```php
 
-    {{ Timpani::edit('name_of_asset', 'label', 'textarea', [ 'html' => 'attributes' ]) }}
+{{ Timpani::edit('name_of_asset', 'label', 'textarea', [ 'html' => 'attributes' ]) }}
 
 ```
 
@@ -112,6 +112,6 @@ For an ace editor input:
 
 ```php
 
-    {{ Timpani::code('name_of_asset', 'label') }}
+{{ Timpani::code('name_of_asset', 'label') }}
 
 ```
