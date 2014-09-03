@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/thyyppa/Timpani.svg?branch=master)](https://travis-ci.org/thyyppa/Timpani)
+
+
 Timpani
 =======
 
