@@ -1,3 +1,0 @@
-[submodule "public/ace-builds"]
-	path = public/ace-builds
-	url = git@github.com:thyyppa/ace-builds.git
