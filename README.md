@@ -44,8 +44,14 @@ After installation add the service provider to your `app/config/app.php` file:
 
 Then publish the assets with artisan:
 
+**For Laravel 4.2**
 ```bash
 $ php artisan asset:publish thyyppa/timpani
+```
+
+**For Laravel 4.3**
+```bash
+$ php artisan publish:assets thyyppa/timpani
 ```
 
 ### Migrate
