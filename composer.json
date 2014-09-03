@@ -1,6 +1,7 @@
 {
     "name": "thyyppa/timpani",
     "description": "Laravel 4.2 CMS",
+    "license": "MIT",
     "authors": [
         {
             "name": "Travis Hyyppä",
